@@ -33,4 +33,4 @@ SNDPGMMSG MSG('Czas zapisu: ' *CAT %CHAR(&ELAPSED) *CAT ' sekund.')
 CHGVAR VAR(&START) VALUE(%SST(%CHAR(&TIMESTAMP)) 9 6 + %SST(%CHAR(&TIMESTAMP)) 15 3 / 1000)
 OVRDBF FILE(&LIB/&FILE) SEQONLY(*YES) /* Ustawienie trybu odczytu sekwencyjnego */
 DCLF FILE(&LIB/&FILE) /* Deklaracja pliku */
-FOR (&I 1 to &
+FOR (&I 1 TO &ITER) DO /* Pętla odczy
